@@ -18,10 +18,12 @@
 
 <body>
 
-  <div class="bg"><b>test</b></div>
+  <div class="bg">
+    <?php include("_header/header.php"); ?>
+  </div>
 
   <div class="br"></div>
-  <?php include("_header/header.php"); ?>
+  
   <div class="bb"></div>
 
   <div class="bn"></div>
