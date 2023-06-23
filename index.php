@@ -19,7 +19,7 @@
 <body>
 
   <div class="bg">
-  <?php include('./_header/header.php'); ?>
+  <?php include("_header/header.php"); ?>
 
 
   </div>
