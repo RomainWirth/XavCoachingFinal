@@ -1,0 +1,116 @@
+/* ---- FONT ---- */
+
+/* ---- BASE ---- */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+h1, h2, h3, h4, p, div, ul, ol {margin: 0; padding: 0;}
+
+a {text-decoration-line: none; color: #000;}
+
+
+/* ---- COLORS ---- */
+:root {
+    --primary: #FF914D;
+    --secondary: #484848;
+    /* --tertiary: #CF0A0A; */
+    --black: #000;
+    --white: #FFF;
+}
+/* utilisation colors */
+/* h1{
+    color: var(--tertiary);
+} */
+
+.bg {
+  /* The image used */
+  background-image: url("imagefondhaut.jpg");
+  /* Full height */
+  height: 80%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.br {
+  /* The image used */
+  background-color: var(--white);
+
+  /* Full height */
+  height: 100%; 
+ 
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bb {
+  /* The image used */
+  background-color: var(--black);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bn {
+  /* The image used */
+  background-color: var(--white);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ---- FLEXBOX ---- */
+.flex-row {
+    display: flex; 
+    flex-direction: row;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.justify-start {
+    justify-content: flex-start;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-end {
+    justify-content: flex-end;
+}
+.justify-around {
+    justify-content: space-around;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.align-start {
+    align-items: flex-start;
+}
+.align-center {
+    align-items: center;
+}
+.align-end {
+    align-items: flex-end;
+}
+.align-around {
+    align-items: space-around;
+}
+.align-between {
+    align-items: space-between;
+}
