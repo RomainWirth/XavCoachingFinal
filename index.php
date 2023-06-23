@@ -17,7 +17,7 @@
 
 
 <body>
-
+  <h1>SITE EN CONSTRUCTION</h1>
   <div class="bg">
     <?php include("_header/header.php"); ?>
   </div>
