@@ -18,11 +18,7 @@
 
 <body>
 
-  <div class="bg">
-    
-
-
-  </div>
+  <div class="bg"><b>test</b></div>
 
   <div class="br"></div>
   <?php include("_header/header.php"); ?>
