@@ -1,35 +1,38 @@
-<header>
-
+<header class="flex-row justify-center align-start">
     <nav class="flex-row space-between">
-
-        <div>
-
+        <div class="nav-items" id="nav-logo">
             <a href="#">
-
-                <img src="./_css/images/logos/XavCoachingLogo.png" alt="logo">
-
+                <div class="img-container flex-row justify-center align-center">
+                    <img src="./_css/images/logos/XavCoachingLogo.png" alt="logo Xav Coaching coach sportif Chavanod Annecy">
+                </div>
             </a>
-
         </div>
-
-        <div>
-
-            <ul class="flex-row justify-between">
-
-                <li><a href="#">Accueil</a></li>
-
-                <li><a href="#">Coucou c'est moi !</a></li>
-
-                <li><a href="#">Viens souffrir ici !</a></li>
-
-                <li><a href="#">T'en fais pas je suis gentil</a></li>
-
+        <div class="flex-row justify-around align-center nav-items">
+            <ul class="flex-row justify-between align-center">
+                <li>
+                    <a href="#">
+                        <p class="nav-button">Accueil</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="nav-button">Accueil</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="nav-button">Accueil</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="nav-button">Accueil</p>
+                    </a>
+                </li>
             </ul>
-
-            <a href="#">Connection</a>
-
+            <a href="#">
+                <p class="nav-button">Connection</p>
+            </a>
         </div>
-
     </nav>
-
 </header>
