@@ -1,5 +1,5 @@
-<header class="flex-row justify-center align-start">
-    <nav class="flex-row space-between">
+<header class="flex-row justify-around align-center">
+    <nav class="flex-row justify-between">
         <div class="nav-items" id="nav-logo">
             <a href="#">
                 <div class="img-container flex-row justify-center align-center">

@@ -79,8 +79,9 @@ a {text-decoration-line: none; color: #000;}
 
 /* ---- HEADER ---- */
 header {
-    background-color: var(--black);
+    background-color: var(--secondary);
     width: 100%;
+    height: 100px;
     position: fixed;
     top: 0;
 }
@@ -89,6 +90,11 @@ nav {
 }
 .img-container {
     max-width: 320px;
+    height: 80px;
+}
+.img-container img {
+    width: 100%;
+    height: 100%;
 }
 .nav-items ul li {
     list-style: none;
@@ -98,11 +104,13 @@ nav {
     color: var(--black);
     border: 1px solid var(--black);
     border-radius: 5px;
+    height: 80px;
 }
 .nav-button:hover {
     background-color: var(--black);
     color: var(--primary);
     border: 1px solid var(--primary);
+    height: 80px;
 }
 
 /* ---- FLEXBOX ---- */
