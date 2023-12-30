@@ -1,154 +1,722 @@
-/* ---- FONT ---- */
-
-
-
-/* ---- BASE ---- */
-body, html {
-  height: 100%;
-  margin: 0;
+/*!   Start global   */
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--white);
+    font-family: 'Noto Sans', sans-serif;
+    list-style: none;
 }
 
-h1, h2, h3, h4, p, div, ul, ol {margin: 0; padding: 0;}
+/*!   End global   */
 
-a {text-decoration-line: none; color: #000;}
-
-/* ---- COLORS ---- */
+/*! ---- FONT ---- */
+.bold {
+    font-weight: bold !important;
+}
+.emphisized {
+    font-size: 1.5rem;
+}
+.text-align-center {
+    text-align: center;
+}
+/*! ---- COLORS ---- */
 :root {
     --primary: #FF914D;
     --secondary: #484848;
-    /* --tertiary: #CF0A0A; */
-    --black: #000;
+    --tertiary: #FE6216;
+    --black: #111;
     --white: #FFF;
+    --bckgdheader: rgba(72,72,72,0.5);
+    --bckgdsmtphbutton: rgba(255, 255, 255, 0.5);
 }
-
+.color-black {
+    color: var(--black) !important;
+}
+.color-tertiary {
+    color: var(--tertiary) !important;
+}
+.color-secondary {
+    color: var(--secondary) !important;
+}
 /* utilisation colors */
 /* h1{
     color: var(--tertiary);
 } */
 
-.bg {
-  /* The image used */
-  background-image: url("images/fond/compresseb.jpg");
-  /* Full height */
-  height: 80%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.br {
-  /* The image used */
-  background-color: var(--white);
-
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.bb {
-  /* The image used */
-  background-color: var(--black);
-
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.bn {
-  /* The image used */
-  background-color: var(--white);
-
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* ---- HEADER ---- */
+/*! ---- HEADER ---- */
 header {
-    background-color: var(--secondary);
+    background-color: var(--bckgdheader);
     width: 100%;
-    height: 100px;
+    height: 10vh;
     position: fixed;
     top: 0;
-}
-nav {
-    max-width: 1024px;
+    z-index: 10;
 }
 .img-container {
     max-width: 320px;
-    height: 80px;
+    height: 10vh;
 }
-.img-container img {
+#logo-site {
     width: 100%;
     height: 100%;
 }
-.nav-items ul li {
-    list-style: none;
+nav {
+    position: fixed;
+    top: 75%;
+    right: 0; /* Positionner la barre de navigation à droite */
+    display: flex; /* Utiliser flexbox pour aligner les éléments en colonne */
+    flex-direction: column; /* Aligner les éléments en colonne */
+    justify-content: center; /* Centrer verticalement les éléments */
+    align-items: flex-end; /* Aligner les éléments à droite */
 }
-.nav-button {
-    background-color: var(--primary);
-    color: var(--black);
-    border: 1px solid var(--black);
-    border-radius: 5px;
-    height: 80px;
+.nav-list-items {
+    display: none;
+    background-color: var(--secondary);
+    width: 50%;
+    position: fixed;
+    right: 0;
+    top: 45%;
+    border-radius: 30px 0 0 30px;
 }
-.nav-button:hover {
-    background-color: var(--black);
-    color: var(--primary);
-    border: 1px solid var(--primary);
-    height: 80px;
-}
-
-/* ---- FLEXBOX ---- */
-.flex-row {
-    display: flex; 
-    flex-direction: row;
-}
-.flex-column {
+.nav-item {
+    height: 50px;
+    text-align: center;
     display: flex;
-    flex-direction: column;
-}
-.justify-start {
-    justify-content: flex-start;
-}
-.justify-center {
     justify-content: center;
+    align-items:center;
 }
-.justify-end {
-    justify-content: flex-end;
+.nav-item span {
+    height: 10%;
+    justify-self: flex-start;
 }
-.justify-around {
-    justify-content: space-around;
-}
-.justify-between {
-    justify-content: space-between;
-}
-.align-start {
-    align-items: flex-start;
-}
-.align-center {
+.icon {
+    height: 85px;
+    width: 85px;
+    background-color: var(--bckgdsmtphbutton);
+    border-radius: 50% 0 0 50%;
+    padding: 5px;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
-.align-end {
-    align-items: flex-end;
+.icon.hidden {
+    display: none;
 }
-.align-around {
-    align-items: space-around;
+.icon span {
+    height: 75px;
+    width: 75px;
 }
-.align-between {
-    align-items: space-between;
+.icon span img {
+    height: 75px;
+    width: 75px;
 }
+/*! --- boutons réseaux sociaux --- */
+#socials {
+    background-color: var(--bckgdsmtphbutton);
+    height: 50px;
+    width: 147px;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 10;
+}
+#socials span {
+    height: 39px;
+    width: 39px;
+}
+.top {
+    height: 10vh;
+    width: 100vw;
+    background-color: var(--secondary);
+}
+.bottom {
+    height: 10vh;
+    width: 100vw;
+    background-color: var(--secondary);
+}
+/*! ---- BODY ---- */
+.h-auto {
+    height: auto;
+}
+.width-fixed {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+/*! --- SECTION 1 --- */
+.first-background {
+    background-image: url(./photos/xav-coaching-forest.jpg);
+    height: 100vh;
+    background-position: 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px 0px 500px 20px #000;
+}
+#section-one-content {
+    height: 50%;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#bkg-black {
+    display: none;
+}
+#landing-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#quote {
+    /* background-color: var(--bckgdsmtphbutton); */
+    /* color: var(--primary); */
+    margin: 10%;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    /* text-shadow: 0 5px 5px var(--black); */
+}
+.main-button {
+    width: 200px;
+    height: 50px;
+    border-radius: 45px;
+    background-color: var(--primary);
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0 0 20px var(--black);
+}
+.main-button:hover {
+    cursor: pointer;
+}
+.button-content {
+    margin: 5px;
+    height: 50px;
+    border: 4px solid var(--secondary);
+    background-color: var(--primary);
+    border-radius: 40px;
+}
+.button-content p {
+    color: var(--secondary);
+    font-weight: bold;
+}
+/*! --- SECTION 2 --- */
+.second-background {
+    background-color: var(--bckgdsmtphbutton);
+    /* background-image: url(./photos/xav-coaching-sweatshirt.png); */
+    height: 100vh;
+    background-position: 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#section-two-content {
+    height: 90vh;
+}
+#section-two-content-cards {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.offre-card {
+    width: 90%;
+    height: 30%;
+    border-radius: 15px;
+    background-image: url(./photos/bkg_cards.png);
+    box-shadow: 0px 0px 10px 0 var(--black);
+}
+.offre-card a {
+    display: block;
+    height: 100%;
+}
+.offre-card-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.offre-card-content-img {
+    display: none;
+}
+.offre-card-content-text {
+    height: 100%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.offre-card-content-text h2 {
+    font-size: 1em;
+    text-align: center;
+}
+.underline {
+    width: 100%;
+    height: 2px;
+    background-color: var(--tertiary);
+}
+/*! --- SECTION 3 --- */
+#third-background {
+    background-color: var(--white);
+}
+.private-coaching-details {
+    height: 90vh;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* box-shadow: 
+        0px 0px 20px var(--primary);  */
+        /* -10px -10px 10px var(--primary),
+        10px 10px 10px var(--primary), 
+        -10px -10px 10px var(--primary); */
+}
+.tarifs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tarifs-cards {
+    margin: 1%;
+    height: 156px;
+    background-color: #F1F1F1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.tarifs-cards-content {
+    margin: 1px;
+    padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#pack-5-seances {
+    border-radius: 10px 10px 0 0;
+}
+#pack-20-seances {
+    border-radius: 0 0 10px 10px;
+}
+.subtext {
+    font-size: 0.8em;
+}
+/* #coaching_details_content-one {
+    height: 75%;
+}
+#coaching_details_content-one h2 {
+    text-align: center;
+}
+#coaching_details_content-two {
+    height: 25%;
+} */
+
+/*! --- SECTION 4 --- */
+#bio {
+    background-color: var(--black);
+}
+.about {
+    background-color: var(--black);
+    height: auto;
+    padding: 2%;
+}
+.about-portrait {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#portrait-container {
+    margin: 5px 0;
+    width: 150px;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+#portrait-container img {
+    width: 100%;
+    height: auto;
+}
+.bio-text {
+    font-size: 0.9rem;
+}
+.margin-2-per {
+    margin: 2%;
+}
+/*! --- SECTION 5 --- */
+#FAQ {
+    background-color: var(--black);
+}
+.FAQ-accordion {
+    width: 90%;
+    max-width: 1024px;
+    margin: 2rem auto;
+}
+.FAQ-accordion-item {
+    background-color: var(--white);
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+}
+.FAQ-accordion-item-header {
+    color: var(--black);
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.FAQ-accordion-item-header::after {
+    color: var(--black);
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+}
+.FAQ-accordion-item-header.active::after {
+    color: var(--black);
+    content: "\2212";
+}
+.FAQ-accordion-item-body {
+    color: var(--black);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.FAQ-accordion-item-body-content {
+    color: var(--black);
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+}
+
+/* SECTION 6 */
+#avis {
+    background-color: var(--white);
+}
+#avis-content {
+    min-height: 90vh;
+    max-width: 1024px;
+    /* margin: 2rem auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#avis-content h2 {
+    color: #000;
+}
+.customer-review {
+    width: 90%;
+    background-color: var(--black);
+    background-image: url(./photos/bkg_cards.png);
+    margin: 2%;
+    padding: 2%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.customer-review-img {
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.user img {
+    max-width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.customer-review p {
+    padding: 2%;
+    font-size: 0.9em;
+}
+/* SECTION 7 */
+#contact {
+    background-color: var(--black);
+}
+#contact-content {
+    height: 90vh;
+}
+footer {
+    background-color: var(--black);
+}
+
+/* Format tablette */
+@media only screen and (min-width: 768px) {
+    #first-background {
+        background-position: 0;
+    }
+    #quote {
+        /* margin: 0; */
+        font-size: 2.5rem;
+    }
+    .offre-card {
+        width: 60%;
+    }
+    .offre-card-content {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .offre-card-content-img {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+    #first-img {
+        border-radius: 15px 0 0 15px;
+    }
+    #second-img {
+        border-radius: 0 15px 15px 0;
+    }
+    #third-img {
+        border-radius: 15px 0 0 15px;
+    }
+    .offre-card-content-img img {
+        width: 100%;
+        min-height: 100%;
+    }
+    .offre-card-content-text {
+        width: 50%;
+    }
+    .private-coaching-details {
+        padding: 2%;
+    }
+    .tarifs {
+        flex-direction: row;
+    }
+    .tarifs-cards {
+        height: 250px;
+        width: 50%;
+    }
+    #pack-5-seances {
+        border-radius: 20px 0 0 20px;
+    }
+    #pack-20-seances {
+        border-radius: 0 20px 20px 0;
+    }
+    .about {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+/* Format Desktop  */
+@media only screen and (min-width: 992px) {
+    header {
+        background-color: var(--bckgdheader) 0%;
+    }
+    .header-content {
+        width: 1024px;
+    }
+    nav {
+        position: relative;
+        top: 0px;
+        min-width: 50%;
+    }
+    .nav-list-items {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        top: 50%;
+        background-color: transparent;
+    }
+    .nav-item {
+        width: auto;
+        margin: 5px;
+    }
+    .icon {
+        display: none;
+    }
+    .toggle {
+        float: right;
+        margin: 20px;
+        color: #EEE;
+        font-size: 30px;
+        border: 1px solid #EEE;
+        padding: 0px 5px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    #socials {
+        right: 20%;
+    }
+    section {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    #firstbackground-content {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+    }
+    #bkg-black {
+        display: block;
+        width: 50%;
+        height: 100%;
+        position: relative;
+        left: 50%;
+        z-index: 2;
+        background-color: var(--black);
+        opacity: 50%;
+    }
+    #landing-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    #quote {
+        text-align: left;
+    }
+    #first-button {
+        align-self: flex-end;
+        margin-right: 15%;
+    }
+    .width-fixed {
+        width: 1024px;
+    }
+    .top {
+        width: 1024px;
+        border-radius: 0 0 15px 15px;
+    }
+    .bottom {
+        width: 1024px;
+        border-radius: 15px 15px 0 0;
+    }
+    /* #first-background {
+        background-position: 0;
+    } */
+    #section-one-content {
+        width: 50%;
+        height: 50vh;
+        justify-content: flex-start;
+    }
+    #section-two-content {
+        flex-direction: row;
+    }
+    .about-portrait {
+        height: auto;
+    }
+    #portrait-container {
+        width: 300px;
+        height: 400px;
+        margin: 30% 0;
+    }
+}
+
+/* ---- CARDS ---- */
+.card {
+    width: 300px;
+}
+.card-container {
+    width: 300px;
+    height: 235px;
+    border: 4px solid var(--black);
+    border-radius: 25px;
+    box-shadow: inset 0em 0em 5px black;
+    background: grey;
+    position: relative;
+    z-index: 0;
+}
+.picture-container {
+    width: 100px;
+    height: 100px;
+    border: 4px solid black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+}
+.card-header {
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+}
+.card-header-content {
+    width: 50%;
+}
+#second-part{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.card-content {
+    padding: 10px;
+}
+
+
+
+  
+/* .bn {
+    The image used
+    background-color: var(--white);
+  
+    Full height
+    height: 100%; 
+  
+    Center and scale the image nicely
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+  
+
+/* ---- FLEXBOX ---- */
+.flex-row {display: flex; flex-direction: row;}
+.flex-column {display: flex; flex-direction: column;}
+.justify-start {justify-content: flex-start;}
+.justify-center {justify-content: center;}
+.justify-end {justify-content: flex-end;}
+.justify-around {justify-content: space-around;}
+.justify-evenly {justify-content: space-evenly;}
+.justify-between {justify-content: space-between;}
+.align-start {align-items: flex-start;}
+.align-center {align-items: center;}
+.align-end {align-items: flex-end;}
+.align-around {align-items: space-around;}
+.align-evenly {align-items: space-evenly;}
+.align-between {align-items: space-between;}
