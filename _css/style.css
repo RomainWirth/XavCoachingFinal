@@ -11,8 +11,6 @@
     list-style: none;
 }
 
-/*!   End global   */
-
 /*! ---- FONT ---- */
 .bold {
     font-weight: bold !important;
@@ -42,14 +40,28 @@
 .color-secondary {
     color: var(--secondary) !important;
 }
+.bkg-color {
+    background-color: var(--bckgdheader);
+}
 /* utilisation colors */
 /* h1{
     color: var(--tertiary);
 } */
+/*! ---- BODY ---- */
+.h-auto {
+    height: auto;
+}
+.width-fixed {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+/*!   End global   */
 
 /*! ---- HEADER ---- */
 header {
-    background-color: var(--bckgdheader);
+    /* background-color: var(--bckgdheader); */
     width: 100%;
     height: 10vh;
     position: fixed;
@@ -142,17 +154,7 @@ nav {
     width: 100vw;
     background-color: var(--secondary);
 }
-/*! ---- BODY ---- */
-.h-auto {
-    height: auto;
-}
-.width-fixed {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-/*! --- SECTION 1 --- */
+/*! --- SECTION ACCUEIL --- */
 .first-background {
     background-image: url(./photos/xav-coaching-forest.jpg);
     height: 100vh;
@@ -209,7 +211,7 @@ nav {
     color: var(--secondary);
     font-weight: bold;
 }
-/*! --- SECTION 2 --- */
+/*! --- SECTION OFFRES --- */
 .second-background {
     background-color: var(--bckgdsmtphbutton);
     /* background-image: url(./photos/xav-coaching-sweatshirt.png); */
@@ -265,7 +267,7 @@ nav {
     height: 2px;
     background-color: var(--tertiary);
 }
-/*! --- SECTION 3 --- */
+/*! --- SECTION TARIFS --- */
 #third-background {
     background-color: var(--white);
 }
@@ -323,7 +325,7 @@ nav {
     height: 25%;
 } */
 
-/*! --- SECTION 4 --- */
+/*! --- SECTION BIOGRAPHIE --- */
 #bio {
     background-color: var(--black);
 }
@@ -361,9 +363,16 @@ nav {
 .margin-2-per {
     margin: 2%;
 }
-/*! --- SECTION 5 --- */
+.text-emphazied {
+    color: var(--primary) !important;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+}
+/*! --- SECTION FAQ --- */
 #FAQ {
     background-color: var(--black);
+    
 }
 .FAQ-accordion {
     width: 90%;
@@ -387,7 +396,7 @@ nav {
     position: relative;
     cursor: pointer;
 }
-.FAQ-accordion-item-header::after {
+/* .FAQ-accordion-item-header::after {
     color: var(--black);
     content: "\002B";
     font-size: 2rem;
@@ -397,7 +406,7 @@ nav {
 .FAQ-accordion-item-header.active::after {
     color: var(--black);
     content: "\2212";
-}
+} */
 .FAQ-accordion-item-body {
     color: var(--black);
     max-height: 0;
@@ -412,7 +421,7 @@ nav {
     border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
 }
 
-/* SECTION 6 */
+/*! --- SECTION AVIS --- */
 #avis {
     background-color: var(--white);
 }
@@ -458,18 +467,29 @@ nav {
     padding: 2%;
     font-size: 0.9em;
 }
-/* SECTION 7 */
+/*! --- SECTION CONTACT --- */
 #contact {
     background-color: var(--black);
 }
 #contact-content {
     height: 90vh;
 }
+/*! --- FOOTER --- */
 footer {
     background-color: var(--black);
 }
+.footer_content {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+}
+.footer_content-contact {
 
-/* Format tablette */
+    display: flex;
+
+}
+
+/*! --- Format tablette --- */
 @media only screen and (min-width: 768px) {
     #first-background {
         background-position: 0;
@@ -535,9 +555,9 @@ footer {
 }
 /* Format Desktop  */
 @media only screen and (min-width: 992px) {
-    header {
-        background-color: var(--bckgdheader) 0%;
-    }
+    /* header {
+        background-color: transparent;
+    } */
     .header-content {
         width: 1024px;
     }

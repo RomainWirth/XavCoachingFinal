@@ -1,6 +1,3 @@
-<footer>
-</footer>
-
-<?php
-    require_once('script.php');
- ?>
+<footer>
+
+</footer>

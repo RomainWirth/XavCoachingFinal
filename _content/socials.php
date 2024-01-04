@@ -5,4 +5,7 @@
     <span>
         <a href="https://www.instagram.com/xavcoachfit/"><img src="./_css/photos/Social_instagram.png" alt=""></a>
     </span>
+    <span>
+        <a href="https://www.youtube.com/@Xavcoaching"><img src="./_css/photos/Social_youtube.png" alt=""></a>
+    </span>
 </div>
