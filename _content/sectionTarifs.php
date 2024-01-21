@@ -1,6 +1,7 @@
-<section id="third-background" class="snap-always snap-center">
+<section id="third-background">
     <div class="top"></div>
     <div class="private-coaching-details">
+        <h2 class="text-black">Coaching privé</h2>
         <div class="tarifs" id="coaching_details_content">
             <div class="tarifs-cards" id="pack-5-seances">
                 <!-- <div>
@@ -36,4 +37,5 @@
         <button class="main-button">Réserver</button>
         <p class="color-black subtext">*20€ supplémentaires par cours pour une deuxième personne</p>
     </div>
+    <div class="bottom"></div>
 </section>

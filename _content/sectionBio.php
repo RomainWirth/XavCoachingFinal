@@ -1,9 +1,9 @@
-<section class="snap-always snap-center" id="bio">
-    <div class="top"></div>
+<section id="bio">
+    <h2>À propos de moi</h2>
     <div class="width-fixed about">
         <div class="about-portrait">
             <div id="portrait-container" class="flex-row justify-center align-start">
-                <img src="./_css/images/photos/xavier-Lozingez-coach-sportif.jpg" alt="">
+                <img src="./_css/images/photos/xavier-Lozingez-coach-sportif.webp" alt="">
             </div>
             <button class="main-button">Me Contacter</button>
         </div>

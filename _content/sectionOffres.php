@@ -1,4 +1,4 @@
-<section id="offres" class="second-background snap-always snap-center">
+<section id="offres" class="second-background">
     <div class="top"></div>
     <div class="width-fixed">
         <div id="section-two-content">
@@ -51,4 +51,5 @@
             </div>
         </div>
     </div>
+    <div class="bottom"></div>
 </section>

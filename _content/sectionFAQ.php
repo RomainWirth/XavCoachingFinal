@@ -1,5 +1,5 @@
 <section id="FAQ" class="snap-always snap-center">
-    <div class="top"></div>
+    <h2>FAQ</h2>
     <div class="FAQ-accordion">
         <div class="FAQ-accordion-item">
             <h3 class="FAQ-accordion-item-header">
