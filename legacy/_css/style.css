@@ -182,7 +182,7 @@ nav {
 /*! --- SECTION ACCUEIL --- */
 .first-background {
     background-image: url(./images/fond/xav-coaching-forest.webp);
-    height: 100vh;
+    height: 100dvh;
     background-position: 25%;
     background-repeat: no-repeat;
     background-size: cover;
